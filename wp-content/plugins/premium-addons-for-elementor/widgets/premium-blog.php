@@ -130,6 +130,8 @@ class Premium_Blog extends Widget_Base {
                     '25%'   => __('4 Columns', 'premium-addons-for-elementor'),
                 ],
                 'default'       => '33.33%',
+                'tablet_default'=> '50%',
+                'mobile_default'=> '100%',
                 'render_type'   => 'template',
                 'label_block'   => true,
                 'condition'     => [
@@ -2337,8 +2339,6 @@ class Premium_Blog extends Widget_Base {
                 break;
         }
         
-        $posts_number = intval ( 100 / substr( $settings['premium_blog_columns_number'], 0, strpos( $settings['premium_blog_columns_number'], '%') ) );
-        
         $carousel = 'yes' == $settings['premium_blog_carousel'] ? true : false; 
         
         $this->add_render_attribute('blog', 'class', [
@@ -2359,7 +2359,13 @@ class Premium_Blog extends Widget_Base {
             
             $speed  = ! empty( $settings['premium_blog_carousel_autoplay_speed'] ) ? $settings['premium_blog_carousel_autoplay_speed'] : 5000;
             $dots   = 'yes' == $settings['premium_blog_carousel_dots'] ? 'true' : 'false';
-        
+
+            $columns = intval ( 100 / substr( $settings['premium_blog_columns_number'], 0, strpos( $settings['premium_blog_columns_number'], '%') ) );
+            
+            $columns_tablet = intval ( 100 / substr( $settings['premium_blog_columns_number_tablet'], 0, strpos( $settings['premium_blog_columns_number_tablet'], '%') ) );
+
+            $columns_mobile = intval ( 100 / substr( $settings['premium_blog_columns_number_mobile'], 0, strpos( $settings['premium_blog_columns_number_mobile'], '%') ) );
+
             $this->add_render_attribute('blog', 'data-carousel', $carousel );
             
             $this->add_render_attribute('blog', 'data-grid', $grid );
@@ -2370,7 +2376,11 @@ class Premium_Blog extends Widget_Base {
 
             $this->add_render_attribute('blog', 'data-speed', $speed );
 
-            $this->add_render_attribute('blog', 'data-col', $posts_number );
+            $this->add_render_attribute('blog', 'data-col', $columns );
+
+            $this->add_render_attribute('blog', 'data-col-tablet', $columns_tablet );
+
+            $this->add_render_attribute('blog', 'data-col-mobile', $columns_mobile );
             
             $this->add_render_attribute('blog', 'data-arrows', $arrows );
             

@@ -3,9 +3,9 @@ Contributors: Leap13, Rimoun
 Tags: Elementor, Elementor Page Builder, Elements, Elementor Addons, Add-ons, Page Builder, Widgets, Elementor Widgets
 Donate Link: https://premiumaddons.com/?utm_source=wp-repo&utm_medium=link&utm_campaign=readme
 Requires at Least: 4.5
-Tested Up To: 5.3.2
+Tested Up To: 5.4
 Requires PHP: 5.4
-Stable Tag: 3.12.0
+Stable Tag: 3.12.1
 License: GPL v3.0
 License URI: https://opensource.org/licenses/GPL-3.0
 
@@ -174,6 +174,12 @@ Premium Addons for Elementor is 100% Ads Free, Ads can only be detected from You
 14. Premium Progress Bar Widget for Elementor
 
 == Changelog ==
+
+= 3.12.1 =
+
+- Fixed: Dynamic links not working for some elements.
+- Fixed: Carousel slides to show is always set to 1 on tablet/mobile in Blog widget.
+- Fixed: Description hover color option not working in Video Box widget.
 
 = 3.12.0 =
 

@@ -1762,7 +1762,7 @@ button.premium-modal-box-modal-close {
 
 .premium-video-box-description-container {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   padding: 5px;
   text-align: center;
   cursor: pointer;
@@ -2768,49 +2768,125 @@ ul.premium-person-social-list {
   left: 0;
   width: 100%;
   height: 100%;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .premium-person-style3 .premium-person-title-desc-wrap {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: flex-start; }
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .premium-person-style3 .premium-person-name-icons-wrap {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end; }
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+     -moz-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+     -moz-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
 
 .premium-person-style3 .premium-person-title {
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  transform: translateX(15px); }
+  -webkit-transform: translateX(15px);
+      -ms-transform: translateX(15px);
+          transform: translateX(15px); }
   .premium-person-style3 .premium-person-title span {
     display: inline-block;
-    transform: rotate(90deg);
-    transform-origin: bottom; }
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: bottom;
+        -ms-transform-origin: bottom;
+            transform-origin: bottom; }
+
+.premium-person-style3 .premium-person-name {
+  padding-left: 10px; }
 
 .premium-person-style3 .premium-person-social-list {
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  transform: translateY(20px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
   opacity: 0;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease; }
 
 .premium-person-style3 .premium-person-list-item {
   line-height: 0; }
   .premium-person-style3 .premium-person-list-item a {
+    padding: 5px 10px 0 0;
     margin: 5px 0; }
 
 .premium-person-style3 .premium-person-container:hover .premium-person-title {
   opacity: 1;
-  transform: translateX(0); }
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0); }
 
 .premium-person-style3 .premium-person-container:hover .premium-person-social-list {
   opacity: 1;
-  transform: translateY(0); }
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
 
 /**************** Premium Dual Header ******************/
 /*******************************************************/
